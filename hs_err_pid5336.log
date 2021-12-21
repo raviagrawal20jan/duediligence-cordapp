@@ -1,0 +1,85 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1188656 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:389), pid=5336, tid=0x0000000000001424
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_301-b09) (build 1.8.0_301-b09)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.301-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d1a4d84000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=5156, stack(0x0000001dd8c00000,0x0000001dd8d00000)]
+
+Stack: [0x0000001dd8c00000,0x0000001dd8d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32ed79]
+
+
+Current CompileTask:
+C2:2836845 10187       4       org.gradle.internal.service.DefaultServiceRegistry$OwnServices$ProviderAnalyser::analyseType (114 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000001d1a6717000 JavaThread "Cache worker for cache directory md-rule (C:\Users\vkumar\.gradle\caches\5.6.4\md-rule)" [_thread_new, id=7556, stack(0x0000000000000000,0x0000000000000000)]
+  0x000001d1a6716000 JavaThread "Cache worker for cache directory md-supplier (C:\Users\vkumar\.gradle\caches\5.6.4\md-supplier)" [_thread_blocked, id=4280, stack(0x0000001dd9900000,0x0000001dd9a00000)]
+  0x000001d1a670e000 JavaThread "Cache worker for file hash cache (C:\Corda1\samples-java\Advanced\duediligence-cordapp\.gradle\5.6.4\fileHashes)" [_thread_blocked, id=5076, stack(0x0000001dd9800000,0x0000001dd9900000)]
+  0x000001d1a6714800 JavaThread "Thread-43" [_thread_blocked, id=7448, stack(0x0000001dd9700000,0x0000001dd9800000)]
+  0x000001d1a670d000 JavaThread "Stdin handler" [_thread_blocked, id=3528, stack(0x0000001dd9600000,0x0000001dd9700000)]
+  0x000001d1a670c800 JavaThread "Asynchronous log dispatcher for DefaultDaemonConnection: socket connection from /127.0.0.1:57014 to /127.0.0.1:62446" [_thread_blocked, id=5480, stack(0x0000001dd9500000,0x0000001dd9600000)]
+  0x000001d1a6713000 JavaThread "Daemon worker Thread 2" [_thread_in_native, id=4868, stack(0x0000001dd9400000,0x0000001dd9500000)]
+  0x000001d1a670f800 JavaThread "Cancel handler" [_thread_blocked, id=2960, stack(0x0000001dd9300000,0x0000001dd9400000)]
+  0x000001d1a6708800 JavaThread "Handler for socket connection from /127.0.0.1:57014 to /127.0.0.1:62446" [_thread_in_native, id=1380, stack(0x0000001dd8300000,0x0000001dd8400000)]
+  0x000001d1a670b800 JavaThread "Daemon Thread 2" [_thread_blocked, id=5332, stack(0x0000001dd8200000,0x0000001dd8300000)]
+  0x000001d1a670e800 JavaThread "Cache worker for Java compile cache (C:\Users\vkumar\.gradle\caches\5.6.4\javaCompile)" [_thread_blocked, id=4292, stack(0x0000001dda900000,0x0000001ddaa00000)]
+  0x000001d1a6709800 JavaThread "Cache worker for file content cache (C:\Users\vkumar\.gradle\caches\5.6.4\fileContent)" [_thread_blocked, id=1832, stack(0x0000001dda500000,0x0000001dda600000)]
+  0x000001d1a670b000 JavaThread "Memory manager" [_thread_blocked, id=5556, stack(0x0000001dda400000,0x0000001dda500000)]
+  0x000001d1a6fe6800 JavaThread "Cache worker for execution history cache (C:\Users\vkumar\.gradle\caches\5.6.4\executionHistory)" [_thread_blocked, id=7324, stack(0x0000001dda000000,0x0000001dda100000)]
+  0x000001d1a6fe5000 JavaThread "Cache worker for journal cache (C:\Users\vkumar\.gradle\caches\journal-1)" [_thread_blocked, id=9196, stack(0x0000001dd9c00000,0x0000001dd9d00000)]
+  0x000001d1a6fec000 JavaThread "File lock request listener" [_thread_in_native, id=8560, stack(0x0000001dd9b00000,0x0000001dd9c00000)]
+  0x000001d1a6feb000 JavaThread "Cache worker for file hash cache (C:\Users\vkumar\.gradle\caches\5.6.4\fileHashes)" [_thread_blocked, id=3392, stack(0x0000001dd9a00000,0x0000001dd9b00000)]
+  0x000001d1a6e12000 JavaThread "Daemon periodic checks" [_thread_blocked, id=4500, stack(0x0000001dd9200000,0x0000001dd9300000)]
+  0x000001d1a6da7800 JavaThread "Incoming local TCP Connector on port 57014" [_thread_in_native, id=6468, stack(0x0000001dd9100000,0x0000001dd9200000)]
+  0x000001d1a6da3800 JavaThread "Daemon health stats" [_thread_blocked, id=7508, stack(0x0000001dd9000000,0x0000001dd9100000)]
+  0x000001d1a4dfc000 JavaThread "Service Thread" daemon [_thread_blocked, id=4268, stack(0x0000001dd8e00000,0x0000001dd8f00000)]
+  0x000001d1a4d89800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=8272, stack(0x0000001dd8d00000,0x0000001dd8e00000)]
+=>0x000001d1a4d84000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=5156, stack(0x0000001dd8c00000,0x0000001dd8d00000)]
+  0x000001d1a4d80800 JavaThread "Attach Listener" daemon [_thread_blocked, id=2420, stack(0x0000001dd8b00000,0x0000001dd8c00000)]
+  0x000001d1a4d7c000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8148, stack(0x0000001dd8a00000,0x0000001dd8b00000)]
+  0x000001d1a488e800 JavaThread "Finalizer" daemon [_thread_blocked, id=3792, stack(0x0000001dd8900000,0x0000001dd8a00000)]
+  0x000001d1a4d64800 JavaThread "Reference Handler" daemon [_thread_blocked, id=1524, stack(0x0000001dd8800000,0x0000001dd8900000)]
+  0x000001d19202d800 JavaThread "main" [_thread_blocked, id=880, stack(0x0000001dd8400000,0x0000001dd8500000)]
+
+Other Threads:
+  0x000001d1a4d41800 VMThread [stack: 0x0000001dd8700000,0x0000001dd8800000] [id=8152]
+  0x000001d1a4e00000 WatcherThread [stack: 0x0000001dd8f00000,0x0000001dd9000000] [id=8240]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:

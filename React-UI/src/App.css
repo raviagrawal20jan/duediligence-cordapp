@@ -1,0 +1,299 @@
+.App {
+    width: 100%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #fff;
+    height: 104px;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    border-bottom: 1px solid #e3e4e4;
+}
+
+.logo-lexis {
+    width: 286px
+}
+.login-bg{
+background: url(bglogin.jpg);
+    background-position: -192px 103px;
+     background-size: cover;
+     background-attachment: inherit;
+     height: 100vh;
+     /* margin-top: 70px; */
+     background-repeat: no-repeat;
+}
+
+
+.login-bg-l{
+background: url(lbglogin.jpg);
+     background-position: -625px 103px;
+         background-size: cover;
+         background-attachment: inherit;
+         height: 100vh;
+         /* margin-top: 70px; */
+         background-repeat: no-repeat;
+}
+
+.login-bg-f{
+background: url(fbglogin.jpg);
+     background-position: 0px 103px;
+         background-size: cover;
+         background-attachment: inherit;
+         height: 100vh;
+         /* margin-top: 70px; */
+         background-repeat: no-repeat;
+}
+
+.td-width{
+width: 20%;
+}
+
+.login-box{
+    padding: 40px 20px !important;
+    border-radius: 4px;
+    background: rgba(0,0,0,.2);
+        width: 38%;
+}
+.pos-rel{
+position:relative
+}
+.logout_btn {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    font-size: 13pt;
+}
+.lending_footer {
+    position: absolute !important;
+    width: 100%;
+    margin: 0 !important;
+    bottom: 0;
+}
+.overlay {
+    position: fixed;
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5000!important;
+}
+.loader-box {
+     z-index: 40000;
+ }
+ .spinner-border {
+     /* z-index: 1; */
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     z-index:5000!important;
+ }
+  .p100{
+    padding: 60px 0;
+}
+.logo-img {
+
+    height: 95px;
+
+    width: 155px;
+
+    display: inline-block;
+
+    background-size: 123px auto;
+
+    background-position: center center;
+
+    overflow: hidden;
+
+}
+
+.title-bar {
+
+    position: relative;
+
+}
+.vh-100{
+height:100vh;
+}
+.photo{
+height: 176px;
+    width: 195px;
+
+}
+
+.popup{
+     left: 140px;
+    position: absolute;
+    background: white;
+    right: 146px;
+
+    z-index:2;
+}
+
+
+.title-bar .link {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 0;
+
+}
+
+
+
+.title-bar .link a:hover {
+
+    text-decoration: underline;
+
+    color: #D5001C !important;
+
+}
+
+.action-width {
+
+    width: 150px;
+
+}
+
+
+
+.action-width .action-icon {
+
+    padding: 0 10px;
+
+    display: inline-block;
+
+}
+
+
+
+.action-width .action-icon svg {
+
+    height: 30px;
+
+    width: 30px;
+
+    cursor: pointer;
+
+}
+
+.action-width .action-icon-disable svg {
+
+    height: 30px;
+
+    width: 30px;
+
+Color: Green
+}
+
+
+.page-title {
+    text-align: left;
+    font-size: 38px;
+    line-height: 46px;
+    padding: 15px 0;
+}
+
+.SubmitButton {
+    padding: 15px 149px 14px 194px
+}
+
+
+.App-header h3 {
+    color: black
+}
+
+.Form-Content {
+    margin-top: 10px;
+    width: 100%
+}
+
+.Form-Controls {
+    margin-left: 0px;
+}
+
+.Form-Controls div {
+    padding-bottom: 5px;
+}
+
+.firstDiv {
+    margin-top: 50px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #D5001C !important;
+    border-color: #D5001C !important;
+    border-radius: 0px !important;
+    min-width: 150px;
+    padding: 0.6875rem;
+    text-align: center;
+}
+
+.btn-second {
+    color: #fff;
+    background-color: #313639 !important;
+    border-color: #313639 !important;
+    border-radius: 0px !important;
+    padding: 0.6875rem 20px;
+    margin-left: 10px !important;
+    text-align: center;
+}
+
+.btn-second:last-button {
+    margin-bottom: 0px !important;
+}
+
+.no-gutter {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.action-width {
+    width: 345px;
+}
+.action-btn{
+height: 30px;
+    width: 30px;
+    padding: 10px;
+    }
+.footer {
+    padding: 35px 0 !important;
+    color: rgba(255, 255, 255, .55);
+    text-align: center;
+}
+.allign-bottom{
+position:absolute !important;
+bottom:0px;
+width:100%
+}
+.row-grid{
+padding:10px;
+background:#ccc
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.colorGreen{
+background-color: green !important
+}

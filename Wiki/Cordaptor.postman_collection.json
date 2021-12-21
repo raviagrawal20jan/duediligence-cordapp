@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "56d6b736-0f32-4ab5-a891-870832ddb452",
+		"name": "Cordaptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ferrari Node Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8502/node/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8502",
+					"path": [
+						"node",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prosche Node Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8501/node/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8501",
+					"path": [
+						"node",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start KYC By Porsche Lender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"options\": {\r\n    \"trackProgress\": true\r\n  },\r\n  \"validater\": {\r\n    \"name\": \"O=LexisNexis,L=Boston,C=US\"\r\n  },\r\n  \"numberOfFiles\": 1,\r\n  \"name\": \"Vijay Kumar\",\r\n  \"address\": \"Jaipur, Rajasthan\",\r\n  \"phoneNbr\": \"989787878\",\r\n  \"income\": \"999\",\r\n  \"vehicleMake\": \"Renault\",\r\n  \"vehicleModel\": \"Duster\",\r\n  \"vehicleStyle\": \"RXZ\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8501/node/Due Diligence Flows/RequestToValidateCorporateRecordsInitiator",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8501",
+					"path": [
+						"node",
+						"Due Diligence Flows",
+						"RequestToValidateCorporateRecordsInitiator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LexisNexis Validate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"options\": {\r\n    \"trackProgress\": true\r\n  },\r\n  \"linearId\": {\r\n    \"id\": \"15282760-0cb4-4aac-90e5-9fc1ce20d59a\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8503/node/Due Diligence Flows/ValidateCorporateRecordsInitiator",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8503",
+					"path": [
+						"node",
+						"Due Diligence Flows",
+						"ValidateCorporateRecordsInitiator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Porsche Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8501/node/Due Diligence Contracts/CorporateRecordsAuditRequest/query?participant=O=Porsche Lender,L=Delhi,C=IN",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8501",
+					"path": [
+						"node",
+						"Due Diligence Contracts",
+						"CorporateRecordsAuditRequest",
+						"query"
+					],
+					"query": [
+						{
+							"key": "participant",
+							"value": "O=Porsche Lender,L=Delhi,C=IN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LexisNexis Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8503/node/Due Diligence Contracts/CorporateRecordsAuditRequest/query?participant=O=LexisNexis,L=Boston,C=US",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8503",
+					"path": [
+						"node",
+						"Due Diligence Contracts",
+						"CorporateRecordsAuditRequest",
+						"query"
+					],
+					"query": [
+						{
+							"key": "participant",
+							"value": "O=LexisNexis,L=Boston,C=US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Porsche Shares with Ferrari",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"options\": {\r\n    \"trackProgress\": true\r\n  },\r\n  \"AuditingResultID\": {\r\n    \"id\": \"15282760-0cb4-4aac-90e5-9fc1ce20d59a\"\r\n  },\r\n  \"sendTo\": {\r\n    \"name\": \"O=Ferrari Lender,L=Miami,C=US\"\r\n  },\r\n  \"trustedAuditorAttachment\": \"8DF3275D80B26B9A45AB022F2FDA4A2ED996449B425F8F2245FA5BCF7D1AC587\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8501/node/Due Diligence Flows/ShareAuditingResultInitiator",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8501",
+					"path": [
+						"node",
+						"Due Diligence Flows",
+						"ShareAuditingResultInitiator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,90 @@
+version: '3'
+services:
+  notary:
+    volumes:
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/node.conf:/etc/corda/node.conf
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/certificates:/opt/corda/certificates
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/logs:/opt/corda/logs
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/persistence:/opt/corda/persistence
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/cordapps:/opt/corda/cordapps
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/network-parameters:/opt/corda/network-parameters
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/additional-node-infos:/opt/corda/additional-node-infos
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Notary/drivers:/opt/corda/drivers
+    environment:
+    - ACCEPT_LICENSE=${ACCEPT_LICENSE}
+    ports:
+    - "10003:10003"
+    - "2221:2221"
+    image: corda/corda-zulu-java1.8-4.8:latest
+  porsche-lender:
+    volumes:
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/node.conf:/etc/corda/node.conf
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/certificates:/opt/corda/certificates
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/logs:/opt/corda/logs
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/persistence:/opt/corda/persistence
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/cordapps:/opt/corda/cordapps
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/network-parameters:/opt/corda/network-parameters
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/additional-node-infos:/opt/corda/additional-node-infos
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\PorscheLender/drivers:/opt/corda/drivers
+    environment:
+    - ACCEPT_LICENSE=${ACCEPT_LICENSE}
+    ports:
+    - "10006:10006"
+    - "50005:50005"
+    - "8501:8501"
+    - "2222:2222"
+    image: corda/corda-zulu-java1.8-4.8:latest
+  ferrari-lender:
+    volumes:
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/node.conf:/etc/corda/node.conf
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/certificates:/opt/corda/certificates
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/logs:/opt/corda/logs
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/persistence:/opt/corda/persistence
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/cordapps:/opt/corda/cordapps
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/network-parameters:/opt/corda/network-parameters
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/additional-node-infos:/opt/corda/additional-node-infos
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\FerrariLender/drivers:/opt/corda/drivers
+    environment:
+    - ACCEPT_LICENSE=${ACCEPT_LICENSE}
+    ports:
+    - "10009:10009"
+    - "8502:8502"
+    - "2223:2223"
+    - "50005:50005"
+    image: corda/corda-zulu-java1.8-4.8:latest
+  lexisnexis:
+    volumes:
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/node.conf:/etc/corda/node.conf
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/certificates:/opt/corda/certificates
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/logs:/opt/corda/logs
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/persistence:/opt/corda/persistence
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/cordapps:/opt/corda/cordapps
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/network-parameters:/opt/corda/network-parameters
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/additional-node-infos:/opt/corda/additional-node-infos
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\LexisNexis/drivers:/opt/corda/drivers
+    environment:
+    - ACCEPT_LICENSE=${ACCEPT_LICENSE}
+    ports:
+    - "10012:10012"
+    - "8503:8503"
+    - "2224:2224"
+    - "50005:50005"
+    image: corda/corda-zulu-java1.8-4.8:latest
+  regulator:
+    volumes:
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/node.conf:/etc/corda/node.conf
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/certificates:/opt/corda/certificates
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/logs:/opt/corda/logs
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/persistence:/opt/corda/persistence
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/cordapps:/opt/corda/cordapps
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/network-parameters:/opt/corda/network-parameters
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/additional-node-infos:/opt/corda/additional-node-infos
+    - C:\Corda1\samples-java\Advanced\duediligence-cordapp\build\nodes\Regulator/drivers:/opt/corda/drivers
+    environment:
+    - ACCEPT_LICENSE=${ACCEPT_LICENSE}
+    ports:
+    - "10015:10015"
+    - "8504:8504"
+    - "2225:2225"
+    - "50005:50005"
+    image: corda/corda-zulu-java1.8-4.8:latest
