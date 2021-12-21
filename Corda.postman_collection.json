@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "d3abb979-13b2-4da1-9f11-19cff3ee731c",
+		"name": "Corda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Kyc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nbrOfFiles",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "partyName",
+							"value": "O=LexisNexis,L=Boston,C=US",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Vijay Kumar",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Jaipur",
+							"type": "text"
+						},
+						{
+							"key": "phoneNbr",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "income",
+							"value": "999",
+							"type": "text"
+						},
+						{
+							"key": "vehicleMake",
+							"value": "Porsche",
+							"type": "text"
+						},
+						{
+							"key": "vehicleModel",
+							"value": "Cyan",
+							"type": "text"
+						},
+						{
+							"key": "vehicleStyle",
+							"value": "Sport",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50005/StartKyc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"StartKyc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Lexis Nexis",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "linearId",
+							"value": "45f7629c-8a45-4431-8590-9cfb19a29fe6",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50005/ApprovalByLexisNexis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"ApprovalByLexisNexis"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Start KYC"
+			},
+			"response": []
+		},
+		{
+			"name": "Porsche to Ferrari",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "linearId",
+							"value": "f32c4b07-b068-41ca-b8bc-d875809ced44",
+							"type": "text"
+						},
+						{
+							"key": "partyName",
+							"value": "O=Ferrari Lender,L=Miami,C=US",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:50005/ShareWithFerrari",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"ShareWithFerrari"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Porsche Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/porscheblocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"porscheblocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LN Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/lexisnexisblocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"lexisnexisblocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ferrari Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/ferrariblocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"ferrariblocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Porsche Node",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/porschenode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"porschenode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check LexisNode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/lnnode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"lnnode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Ferrari Node",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/ferrarinode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"ferrarinode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50005/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50005",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
